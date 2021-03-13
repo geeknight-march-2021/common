@@ -19,7 +19,7 @@ module.exports = {
     new webpack.DllPlugin({
       format: isDevEnv ? true : false,
       context: __dirname,
-      path: path.join(__dirname, "build", "manifest.json")
+      path: path.join(__dirname, "build", "commons-manifest.json")
     })
   ]
 };
