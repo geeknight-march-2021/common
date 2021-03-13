@@ -10,15 +10,15 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "build"),
-    filename: "commons.js",
-    library: "commons"
+    filename: "[name].js",
+    library: "[name]_[fullhash]"
   },
 
   plugins: [
     new webpack.DllPlugin({
       format: isDevEnv ? true : false,
-      path: path.join(__dirname, "build", "commons-manifest.json"),
-      name: "commons"
+      path: path.join(__dirname, "build", "[name]-manifest.json"),
+      name: "[name]_[fullhash]"
     })
   ]
 };
