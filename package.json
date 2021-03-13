@@ -1,0 +1,22 @@
+{
+  "name": "commons",
+  "version": "1.0.0",
+  "description": "common libs",
+  "main": "index.js",
+  "repository": "repository-url-here",
+  "author": "knights",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "react": "17.0.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.25.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "build": "rimraf build && cross-env NODE_ENV=production npx webpack",
+    "build-dev": "rimraf build && cross-env NODE_ENV=development npx webpack"
+  }
+}
