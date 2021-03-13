@@ -5,14 +5,14 @@ const isDevEnv = process.env.NODE_ENV === "development";
 module.exports = {
   mode: isDevEnv ? "development" : "production",
   entry: {
-    vendors: ["react"]
+    vendors: ["react", "react-dom", "@material-ui/core"]
   },
 
   output: {
     path: path.join(__dirname, "build"),
-    filename: "common.js",
+    filename: "commons.js",
     publicPath: "/",
-    library: "Common"
+    library: "Commons"
   },
 
   plugins: [
