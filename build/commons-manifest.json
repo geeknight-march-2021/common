@@ -1,4 +1,5 @@
 {
+  "name": "commons",
   "content": {
     "./node_modules/@material-ui/core/esm/index.js": {
       "id": "./node_modules/@material-ui/core/esm/index.js",
