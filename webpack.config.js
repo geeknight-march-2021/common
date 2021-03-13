@@ -11,14 +11,15 @@ module.exports = {
   output: {
     path: path.join(__dirname, "build"),
     filename: "[name].js",
-    library: "[name]_[fullhash]"
+    publicPath: "/",
+    library: "[name]"
   },
-
   plugins: [
     new webpack.DllPlugin({
       format: isDevEnv ? true : false,
-      path: path.join(__dirname, "build", "[name]-manifest.json"),
-      name: "[name]_[fullhash]"
+      // name: "[name]",
+      context: path.join(__dirname),
+      path: path.join(__dirname, "build", "[name]-manifest.json")
     })
   ]
 };
