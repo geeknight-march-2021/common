@@ -2,12 +2,13 @@ const webpack = require("webpack");
 const path = require("path");
 const isDevEnv = process.env.NODE_ENV === "development";
 const paths = require('./paths');
+const commons = require('./commons');
 
 module.exports = function() {
   return {
     mode: isDevEnv ? "development" : "production",
     entry: {
-      commons: ["react", "react-dom", "@material-ui/core"]
+      commons: commons
     },
 
     output: {
