@@ -19,7 +19,6 @@ module.exports = function() {
     plugins: [
       new webpack.DllPlugin({
         format: isDevEnv ? true : false,
-        context: __dirname,
         path: path.join(paths.appBuild, "[name]-manifest.json")
       })
     ]
