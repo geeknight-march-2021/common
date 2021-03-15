@@ -12,5 +12,6 @@ module.exports = [
   "react",
   "react-dom",
   "styled-components",
+  "react-modal",
   ...materialUIDependencies
 ]
